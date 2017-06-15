@@ -1,0 +1,62 @@
+@font-face {
+    font-family: 'imago_probook'; font-weight: normal; font-style: normal;
+    src: url('../fonts/imagoproboo-webfont.woff2') format('woff2'), url('../fonts/imagoproboo-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'imago_probook_italic'; font-weight: normal; font-style: normal;
+    src: url('../fonts/imagoprobooita-webfont.woff2') format('woff2'), url('../fonts/imagoprobooita-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'imago_promedium'; font-weight: normal; font-style: normal;
+    src: url('../fonts/imagopromed-webfont.woff2') format('woff2'), url('../fonts/imagopromed-webfont.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'imago_promedium_italic'; font-weight: normal; font-style: normal;
+    src: url('../fonts/imagopromedita-webfont.woff2') format('woff2'), url('../fonts/imagopromedita-webfont.woff') format('woff');
+}
+
+*, p{ font-family: 'imago_probook'; }
+h1, h2, h3, h4{ font-family: 'imago_promedium'; }
+
+.blue-txt{ color: #0066b1; }
+.grey-txt{ color: #575756; }
+
+.choicelist li.choice input[type="radio"] + label span, .choicelist li.choice input[type="checkbox"] + label span {
+    margin: -13px 10px 0 -20px;
+}
+
+ul.reddots{ list-style: none; padding-left: 20px; }
+ul.reddots li{ position: relative; }
+ul.reddots li::before{ width: 6px; height: 6px; left: -20px; top: 12px; content: " "; background: #a91024; position: absolute; display: inline-block; line-height: 31px;}
+
+
+.step-container{ display: flex; justify-content: space-between; }
+.step-box{ width: 480px; font-size: 30px; }
+.step-box header{	height: 73px; width: 100%; background: #a91024; color: #FFF; border-radius: 18px 18px 0 0; padding: 0 30px; box-sizing: border-box; line-height: 73px; }
+.step-box section{	height: 190px; width: 100%; background: #f4f6fc; border: 1px solid #878786; border-top: none; box-sizing: border-box; padding: 30px; line-height: 32px; }
+.step-arrow{ width: 0; height: 0; border-top: 40px solid transparent; border-bottom: 40px solid transparent; border-left: 40px solid #878786; margin-top: 20px; }
+	
+.accordianblock{ 
+	position: relative; background: #f4f6fc; width: 480px; min-height: 180px; border-radius: 20px; padding: 30px; 
+	box-shadow: 2px 0px 4px 2px rgba(0,0,0,0.15); box-sizing: border-box; font-size: 26px; line-height: 31px;
+}
+
+.accordianblock::after{
+	position: absolute; bottom: 0; left: 0; content: ""; display: block; background: #878786; height: 30px; width: 100%; border-radius: 0 0 20px 20px;
+}
+
+.accordianblock::before{
+	position: absolute; content: "\f078"; display: block; width: 35px; height: 35px; background: #0066b1; border-radius: 16px; bottom: 13px; z-index: 999; 
+	left: 50%; margin-left: -17.5px; font-family: FontAwesome; color: #FFF; text-align: center; line-height: 35px; font-size: 20px; cursor: pointer;
+}
+
+.accordianblock.open::before{
+	transform: rotate(180deg);
+}
+
+.accordianblock 	 .hiddenblock{ width: 100%; height: 0; overflow: hidden; transition: all .3s ease; }
+.accordianblock.open .hiddenblock{ height: auto; }
+.accordianblock .hiddenblock img{ width: 100%; margin-bottom: 20px; }
